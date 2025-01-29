@@ -1,11 +1,11 @@
-#ifndef TETRIS_H
+# ifndef TETRIS_H
 # define TETRIS_H
 
 struct tetris;
 
 struct tetris_block;
 
-void tetris_cleanup_io();
+void tetris_cleanup_io(void);
 
 void tetris_signal_quit(int);
 

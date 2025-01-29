@@ -6,6 +6,7 @@
 # include <time.h>
 # include <fcntl.h>
 # include <string.h>
+# include <unistd.h>
 
 struct tetris_level {
     int score;
@@ -77,7 +78,7 @@ struct tetris_level levels[]= {
 struct termios save;
 
 void
-teris_cleanup_io() {
+teris_cleanup_io(void) {
     tcsetattr(fileno(stdin), TCSANOW,&save);
 }
 
